@@ -1,0 +1,56 @@
+body {  /*sets the default off white background colour for the entire page*/
+    background: #0a0a0a;
+    color: #fefefe;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+    color: orange;
+    font-family: papyrus;
+    font-size: 80px;
+    position: relative;
+    top: -1150px;
+    text-align: center;
+    text-shadow: 2px 2px 8px #000;
+}
+h3, button {
+    font-family:'Courier New', Courier, monospace;
+}
+h3, button, .keyfeats {
+    position: relative;
+    top: -1170px;
+    left: 20px;
+    color: gold
+}
+h2 {
+    font-family: papyrus;
+}
+button {
+    background-color: #000;
+    color: greenyellow;
+    font-size: 20px;
+}
+.feats {
+    text-align: center;
+    position: relative;
+    top: -820px;
+    color: orange;
+    font-family: papyrus;
+    font-size: 40px;
+    text-shadow: 2px 2px 8px #000;
+}
+#front {
+    position: relative;
+    top: -350px;
+    left: -20%;
+    max-width: 450px;
+    max-height: 600px;
+    filter: contrast(200%) opacity(80%) sepia(100%);  
+}
+#bg {
+    width: 60%;
+    height: 50%;
+    position: relative;
+    top: -100px;
+    left: 20%;
+    filter: brightness(50%) contrast(150%);  
+}
