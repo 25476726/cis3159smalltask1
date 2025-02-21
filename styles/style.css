@@ -1,7 +1,9 @@
-body {  /*sets the default off white background colour for the entire page*/
+body {  
     background: #0a0a0a;
     color: #fefefe;
     font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
 }
 h1 {
     color: orange;
@@ -17,35 +19,73 @@ h3, button {
 }
 h3, button, .keyfeats {
     position: relative;
-    top: -1170px;
-    left: 20px;
+    top: -1050px;
+    left: 5%;
+    color: gold
+}
+.specs {
+    position: relative;
+    top: -1460px;
+    left: 80%;
     color: gold
 }
 h2 {
     font-family: papyrus;
 }
+#price {
+    font-size: 28px;
+}
 button {
     background-color: #000;
     color: greenyellow;
-    font-size: 20px;
+    font-size: 32px;
 }
 .feats {
     text-align: center;
     position: relative;
-    top: -820px;
+    top: -780px;
+    left: 0%;
     color: orange;
     font-family: papyrus;
     font-size: 40px;
     text-shadow: 2px 2px 8px #000;
+    white-space: nowrap; /* Ensures text doesn't wrap */
+    overflow: hidden; /* Hides overflow text */
+    display: inline-block;
+    width: 100%; /* Ensure it takes up full width */
+    animation: scrollText 3s linear infinite;
 }
-#front {
+#foodsection {
+    display: flex; /* Aligns children (images) side by side */
+    justify-content: center; /* Optional: centers the images */
+    gap: 10%; /* Adds space between the images (optional) */
     position: relative;
-    top: -350px;
-    left: -20%;
-    max-width: 450px;
-    max-height: 600px;
-    filter: contrast(200%) opacity(80%) sepia(100%);  
+    top: -800px;
 }
+#fooddesc {
+    position:relative;
+    top: -800px;
+    left: 39%;
+    color: orange;
+    font-family: papyrus;
+    font-size: 40px;
+}
+
+.foodimg {
+    max-width: 40%; /* Ensures each image takes up half of the container width */
+    object-fit: contain; /* Ensures images maintain their aspect ratio */
+    filter: contrast(120%);
+}
+
+@keyframes scrollText {
+    0% {transform: translateY(25%); opacity: 0.75; }
+    25% {transform: translateY(0%); opacity: 1; }
+    50% {transform: translateY(-25%); opacity: 0.75; }
+    75% {transform: translateY(0%); opacity: 1; }
+    100% {transform: translateY(25%); opacity: 0.75; }
+}
+
+/* Background Image */
 #bg {
     width: 60%;
     height: 50%;
@@ -53,4 +93,77 @@ button {
     top: -100px;
     left: 20%;
     filter: brightness(50%) contrast(150%);  
+    animation: flickerFlame 3s linear infinite;
+}
+#bg2 {
+    width: 90%;
+    height: 1100px;
+    position: relative;
+    top: -1800px;
+    left: 10%;
+    filter: brightness(50%) contrast(150%);  
+    animation: flickerFlame 3s linear infinite;
+    z-index: -1;
+}
+@keyframes flickerFlame {
+    0% { opacity: 0.5; }
+    10% { opacity: 0.8; }
+    20% { opacity: 0.7; }
+    30% { opacity: 1; }
+    40% { opacity: 0.75; }
+    50% { opacity: 0.85; }
+    60% { opacity: 1; }
+    70% { opacity: 0.8; }
+    80% { opacity: 0.7; }
+    90% { opacity: 0.75; }
+    100% { opacity: 0.5; }
+}
+
+
+/* Slideshow Container */
+.slideshow-container {
+    position: absolute; /* Keeps it above the background image */
+    top: 200px; /* Adjusted to move the slideshow down */
+    left: 50%; /* Center the slideshow */
+    transform: translateX(-50%); /* Ensure the slideshow is centered */
+    width: 450px; /* Set a fixed width */
+    height: 600px; /* Set a fixed height */
+    overflow: hidden;
+    z-index: 10; /* Ensure it is above the background */
+}
+
+/* Individual Slide */
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 11; /* Ensure slides appear above */
+    opacity: 0; /* Initially hide slides */
+    transition: opacity 1s ease-in-out; /* Add a smooth fade transition */
+}
+
+/* Ensure images fit properly */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: contrast(200%) opacity(80%) sepia(100%);
+}
+
+/* Show the first slide */
+.slide:first-child {
+    display: block;
+    opacity: 1; /* Show the first slide with full opacity */
+}
+
+/* Animation for fade effect */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0; } 
+    to { opacity: 1; }
 }

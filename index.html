@@ -8,12 +8,18 @@
 </head>
 <body>
     <img id="bg" src="assets/images/flames1.png" alt="background image">
-    <!-- <img id="left" src="assets/images/frontleft.png" alt="Front Left of the Air Fryer"> -->
-    <img id="front" src="assets/images/front.png" alt="Front of the Air Fryer">
-    <!-- <img id="right" src="assets/images/frontright.png" alt="Front Right of the Air Fryer"> -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="assets/images/frontleft.png" alt="Front Left of the Air Fryer">
+        </div>
+        <div class="slide fade">
+            <img src="assets/images/front.png" alt="Front of the Air Fryer">
+        </div>
+        <div class="slide fade">
+            <img src="assets/images/frontright.png" alt="Front Right of the Air Fryer">
+        </div>
+    </div>    
     <h1>Lewis's Air Fryer</h1>
-    <h3 id="price">£42.99</h3>
-    <button>Buy</button>
     <h2 class="keyfeats">Key Features:</h2>
     <ul class="keyfeats">
         <li>Family Sized 4.2 Litre Basket</li>
@@ -21,7 +27,9 @@
         <li>30 Minute Timer</li>
         <li>Fully Variable Temperature Up To 200°C</li>
     </ul>
-    <h3 class="feats">The Ultimate Air Fryer - Quality Meets Practicality</h3>
+    <h3 id="price">£42.99</h3>
+    <button>Buy</button>
+    <h3 class="feats">The Ultimate Air Fryer</h3>
     <h2 class="specs">Specifications:</h2>
     <ul class="specs">
         <li>Dimensions: 34cm x 32cm x 34cm</li>
@@ -29,5 +37,12 @@
         <li>Power: 1400W</li>
         <li>Voltage: 240V</li>
     </ul>
+    <script src="js/slideshow.js"></script>
+    <h2 id="fooddesc">Food from this Air Fryer</h2>
+    <section id="foodsection">
+    <img class="foodimg" src="assets/images/food1.png" alt="Food from this air fryer">
+    <img class="foodimg"src="assets/images/food2.png" alt="Food from this air fryer">
+    </section>
+    <img id="bg2"src="assets/images/flames2.png" alt="background image">
 </body>
 </html>
