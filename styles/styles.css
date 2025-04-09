@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Electrolize&display=swap');
+h1, #fooddesc {
+    text-align: center;
+    font-size: 2.75em;
+}
+h1, h2, h3 {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 600;
+    font-style: bold;;
+}
+p, li {
+    font-family: "Electrolize", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+#foodsection img {
+    max-width: 100%;
+}
+.slideshow-container {
+max-width: 50%;
+}
+.slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+}
+.slide img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    max-height: 50vh; 
+}
+.slide:first-child {
+    display: block;
+    opacity: 1; 
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from { opacity: 0; } 
+    to { opacity: 1; }
+}
