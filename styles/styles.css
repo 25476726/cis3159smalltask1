@@ -188,3 +188,9 @@ button:hover {
     from { opacity: 0; } 
     to { opacity: 1; }
 }
+@media (max-aspect-ratio: 1/1) {
+    .slideshow-container {
+        max-width: 100vw;
+        padding: 0;
+      }
+}
