@@ -18,12 +18,13 @@ p, li {
     font-style: normal;   
     font-size: large;
 }
-header {
+header, footer {
     background: linear-gradient(90deg, darkorange, brown, darkorange, brown, darkorange);
     background-size: 200% 200%; /* Allows for a smoother transition */
     animation: gradientAnimation 5s infinite linear;
     margin: 0;
     padding: 10px;
+    text-align: center;
 }
 @keyframes gradientAnimation {
     0% { background-position: 0% 0%; }
