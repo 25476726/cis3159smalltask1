@@ -18,7 +18,7 @@ p, li {
     font-style: normal;   
     font-size: large;
 }
-header, footer {
+header, footer, button {
     background: linear-gradient(90deg, darkorange, brown, darkorange, brown, darkorange);
     background-size: 200% 200%; /* Allows for a smoother transition */
     animation: gradientAnimation 5s infinite linear;
